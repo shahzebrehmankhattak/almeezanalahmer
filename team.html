@@ -20,6 +20,7 @@
             font-family: arial;
             padding: 10px;
             margin: 5px;
+            border-radius: 16px;
         }
 
         .title {
@@ -55,7 +56,7 @@
 </head>
 
 <body style='background-color: rgb(62, 118, 180);'>
-    <nav class="navbar navbar-expand-lg navbar-tranparent" style="background-color: rgb(145, 48, 90);">
+    <nav class="navbar navbar-expand-lg navbar-tranparent" style="background-color: #b2278a;">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="#">Al-Meezan Al-Ahmer
                 Advertisment</a>
@@ -66,7 +67,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white me-4 joinBtn" aria-current="page" href="contact-us.html">Contatact
+                        <a class="nav-link text-white me-4 joinBtn" aria-current="page" href="contactus.php">Contatact
                             Us</a>
                     </li>
 
@@ -74,7 +75,7 @@
                         <a class="nav-link text-white joinBtn" href="products.html">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white joinBtn" href="home.html">Home</a>
+                        <a class="nav-link text-white joinBtn" href="index.html">Home</a>
                     </li>
                 </ul>
             </div>
@@ -89,13 +90,14 @@
     </div>
     <div class="container">
         <div class="row"
-            style="border-radius:25px;border: 2px solid rgb(145, 48, 90);padding: 2rem;background-color: rgb(145, 48, 90);margin: 0.5rem;">
+            style="border-radius:25px;border: 2px solid #b2278a;padding: 2rem;
+            background-color: #b2278a;margin: 0.5rem;">
             <h4 class="text-center text-white">
                 Meet With Our Team
             </h4>
             <div class="col-lg-3">
                 <div class="card">
-                    <img src="./dummy-image.jpg" alt="John" style="width:100%">
+                    <img src="./dummy-image.jpg" alt="John" style="width:100%; border-radius: 16px;">
                     <h4>John Doe</h4>
                     <p class="title">CEO & Founder, Example</p>
                     <p>Harvard University</p>
@@ -110,7 +112,26 @@
             </div>
             <div class="col-lg-3">
                 <div class="card">
-                    <img src="./dummy-image.jpg" alt="John" style="width:100%">
+                    <!-- change image of team member from here -->
+                    <img src="./dummy-image.jpg" alt="John" style="width:100%; border-radius: 16px;">
+                    <!-- change Name from here -->
+                    <h4>John Doe</h4>
+                    <!-- change designation -->
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 10px 0;">
+                        <!-- enter any social media link here instead of # -->
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <img src="./dummy-image.jpg" alt="John" style="width:100%; border-radius: 16px;">
                     <h4>John Doe</h4>
                     <p class="title">CEO & Founder, Example</p>
                     <p>Harvard University</p>
@@ -125,22 +146,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="card">
-                    <img src="./dummy-image.jpg" alt="John" style="width:100%">
-                    <h4>John Doe</h4>
-                    <p class="title">CEO & Founder, Example</p>
-                    <p>Harvard University</p>
-                    <div style="margin: 10px 0;">
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <img src="./dummy-image.jpg" alt="John" style="width:100%">
+                    <img src="./dummy-image.jpg" alt="John" style="width:100%; border-radius: 16px;">
                     <h4>John Doe</h4>
                     <p class="title">CEO & Founder, Example</p>
                     <p>Harvard University</p>
@@ -158,7 +164,7 @@
     </div>
 
 
-
+<!-- do not change any thing here -->
     <script>
         var myIndex = 0;
         carousel();
