@@ -31,31 +31,38 @@
 </head>
 
 <body style='background-color: rgb(62, 118, 180);'>
-    <nav class="navbar navbar-expand-lg navbar-tranparent" style="background-color: #b2278a;">
+<nav class="navbar navbar-expand-lg navbar-tranparent sticky-top" style="background-color: #b2278a;">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">Al-Meezan Al-Ahmer
+            <a class="navbar-brand text-white" href="#">Al-Mizan Al-Ahmer
                 Advertisment</a>
-            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white me-4 joinBtn" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link text-white joinBtn" href="index.html">Home</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link text-white joinBtn" href="#rating">Rating</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-white joinBtn" href="products.html">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white joinBtn" href="team.html">Team</a>
                     </li>
+                    <li class="nav-item">
+                     <a class="nav-link text-white me-4 joinBtn" aria-current="page" href="contactus.php">Contatact</a>
+                    </li>
+
+                  
+                   
                 </ul>
             </div>
         </div>
     </nav>
-
     <div class="container-fluid">
         <div class="container ">
             <div class="row mt-5">
@@ -126,6 +133,108 @@
                    
 
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="conatiner-fluid " id="rating" style='background-color: rgb(62, 118, 180); '>
+        <div class="container">
+            <div class="row pb-3">
+                <div class="col-lg-12">
+                    <h2 class="text-center text-white">Customer Review</h2>
+                </div>
+                <div class="row mt-2 mb-2">
+                    <div class="col-lg-12 text-center">
+                        <div class="card-team"
+                            style="border: 1px solid #b2278a;background-color: #b2278a;border-radius: 8px;">
+                            <h3 class="text-white">Over All Rating 4 </h3>
+                            <div class="card-body">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 text-center">
+                        <div class="card-team"
+                            style="border: 1px solid #b2278a;background-color: #b2278a;border-radius: 8px;">
+                            <h3 class="text-white">Quality </h3>
+                            <div class="card-body">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="card-team"
+                            style="border: 1px solid rgba(0, 0, 0, 0.315);background-color: #b2278a;border-radius: 8px;">
+                            <h3 class="text-white">Product </h3>
+                            <div class="card-body">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="card-team"
+                            style="border: 1px solid rgba(0, 0, 0, 0.315);background-color: #b2278a;border-radius: 8px;">
+                            <h3 class="text-white">Pricing </h3>
+                            <div class="card-body"> <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style='background-color: #b2278a;'>
+        <div class="container">
+            <div class="row   pt-3 mb-3">
+                <div class="col-lg-12 col-xs-12">
+                    <h4 class="text-center text-white">Contatact Us</h4>
+                    <div class="contact-box d-flex justify-content-center flex-wrap">
+                        <div class="email-box">
+
+                            <h5>Email <span class="fa fa-envelope text-white"></span></h5>
+                            <a href="" class="text-decoration-none text-dark fw-bold">zzzz@gmail.com</a>
+                        </div>
+                        <div class="email-box">
+
+                            <h5>Phone <span class="fa fa-phone text-white"></span></h5>
+                            <a href="" class="text-decoration-none text-dark fw-bold">032352324151</a>
+                        </div>
+                        <div class="email-box">
+                            <h5><a href="" class="text-decoration-none text-dark fw-bold">Whatsapp <span
+                                        class="fa fa-whatsapp" style="color:white"></span></a> </h5>
+
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
