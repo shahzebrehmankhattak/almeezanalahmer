@@ -11,7 +11,7 @@ if(isset($_POST['message']))
   extract($_POST);
   // echo ;
   $email_body = $message;
-  $email_to= 'aman.bangashqau2@gmail.com';
+  $email_to= 'sgacadcompany@gmail.com';
   $email_subject=$subject;
   $from_name="shahzeb";
   $from_addr='shahzebkhattak703@gmail.com';
@@ -23,8 +23,11 @@ if(isset($_POST['message']))
 
   send_mail($email_to,$email_cc,$email_bcc,$email_subject,$email_body,$from_addr,$from_name,$from_password);
   $response = array();
-  $response['Email sent to Customer please Refresh page']=1;
-echo   $response = json_encode($response);
+  $response='Email sent to Customer please Refresh page';
+echo "<script>alert(' $response');
+window.location.href = 'index.html';
+</script>";
+  
 }
 else
 {
