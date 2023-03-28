@@ -13,22 +13,50 @@
         crossorigin="anonymous"></script>
 
     <style>
-        /* .carousel-caption{
-            bottom:-68rem !important
-        } */
-
-/* .carousel-inner {
-  height: 100vh;
-} */
-
-/* .carousel-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 60vh;
-} */
-       
-
+      
+      .fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 16px;
+  
+}
+.fa-facebook:hover {
+  opacity: 0.7;
+}
+      .fa-twitter {
+  background: #55ACEE;
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 16px;
+  
+}
+.fa-twitter:hover {
+  opacity: 0.7;
+}
+      .fa-instagram {
+  background: #9b6954;
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 16px;
+  
+}
+.fa-instagram:hover {
+  opacity: 0.7;
+}
+      
         .main-info span {
             font-size: 13px;
             font-weight: 500;
@@ -155,16 +183,46 @@
            
             
         }
-        .card-style .card-title{
+        .overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #b2278a;
+
+  overflow: hidden;
+  /* width: 100%; */
+  height:0;
+  transition: .5s ease;
+}
+        .card-style:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+.card-text-p{
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 7rem;
+}
+        /* .card-style .card-title{
             transition:  1s;
-        }
+        } */
+       .card-style .card-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
        
 
-        .card-style:hover, .card-title:hover {
-            background-color: #b2278a;
-            color: white;
-            font-size: 34px;
-        }
+       
 
         .infoCard-style {
             background-color: rgba(0, 0, 0, 0.315);
@@ -287,15 +345,15 @@
             right: 0;
         }
     </style>
-    <title>Al Meezan Al Ahmer Advertisement</title>
+    <title>Al Mizan Al Ahmer Advertisement</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-tranparent sticky-top" style="background-color: #b2278a;">
+    <nav class="navbar navbar-expand-lg navbar-tranparent navbar-light sticky-top" style="background-color: #b2278a;">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="#">Al-Mizan Al-Ahmer
-                Advertisment</a>
-            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                Adv</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -416,38 +474,19 @@
                         forward to serving you! Thanks
                     </p>
                 </div>
-                <!-- <div class="col col-lg-4">
-                    <div class="card card-style">
-                        <div class="card-body">
-                            <div class="card-image  text-end">
-                             
-                                <i class="fa fa-money" style=" font-size: 36px"></i>
-                            </div>
-                         
-                            <div class="card-title  m-2">Cash On Delivery</div>
-                        </div>
-                    </div>
-
-                </div> -->
-                <!-- <div class="col col-lg-4">
-                    <div class="card card-style">
-                        <div class="card-body">
-                            <div class="card-image  text-end">
-                                <i class="fa fa-car" style=" font-size: 36px"></i>
-                            </div>
-                            <div class="card-title  m-2">Free Delivery</div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <div class="row mt-2">
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                     <div class="card card-style">
                         <div class="card-body">
                             <div class="card-image  text-end">
-                                <i class="fa fa-bar-chart" style=" font-size: 36px"></i>
+                        <i class="fa fa-bar-chart" style=" font-size: 36px"></i>
                             </div>
-                            <div class="card-title  m-2">7 Days free change</div>
+                            <div  class="card-text-p">7 days Free Change</div>
+                            <div class="overlay">
+                               
+                                <div class="card-title">7 Days free change</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -457,7 +496,11 @@
                             <div class="card-image  text-end">
                                 <i class="fa fa-clock-o" style=" font-size: 36px"></i>
                             </div>
-                            <div class="card-title  m-2">1-3 days delivery</div>
+                            <div  class="card-text-p">1-3 days delivery</div>
+                            <div class="overlay">
+
+                                <div class="card-title">1-3 days delivery</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -467,7 +510,11 @@
                             <div class="card-image  text-end">
                                 <i class="fa fa-steam" style=" font-size: 36px"></i>
                             </div>
-                            <div class="card-title  m-2">Product Quality</div>
+                            <div  class="card-text-p">Product Quality</div>
+                            <div class="overlay">
+
+                                <div class="card-title  m-2">Product Quality</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -680,7 +727,7 @@
 
                     </div>
                 </div>
-                <div class="row">
+                <div class="row gy-1">
                     <div class="col-lg-4 text-center">
                         <div class="card"
                             style="border: 1px solid #b2278a;background-color: #b2278a;border-radius: 8px;">
@@ -733,27 +780,25 @@
     </div>
     <div class="container-fluid" style='background-color: #b2278a;'>
         <div class="container">
-            <div class="row   pt-3 mb-3">
-                <div class="col-lg-12 col-xs-12">
-                    <h4 class="text-center text-white">Contatact Us</h4>
-                    <div class="contact-box d-flex justify-content-center flex-wrap">
-                        <div class="email-box">
-
-                            <h5>Email <span class="fa fa-envelope text-white"></span></h5>
-                            <a href="" class="text-decoration-none text-dark fw-bold">zzzz@gmail.com</a>
-                        </div>
-                        <div class="email-box">
-
-                            <h5>Phone <span class="fa fa-phone text-white"></span></h5>
-                            <a href="" class="text-decoration-none text-dark fw-bold">032352324151</a>
-                        </div>
-                        <div class="email-box">
-                            <h5><a href="" class="text-decoration-none text-dark fw-bold">Whatsapp <span
-                                        class="fa fa-whatsapp" style="color:white"></span></a> </h5>
-
-                        </div>
-                    </div>
-                </div>
+            <div class="row   pt-3 pb-3">
+               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+<div>
+<h5 class="text-white text-center pb-2">Email us at</h5>
+<p class="text-center text-white fs-5">sgacadcompany@gmail.com</p>
+</div>
+               </div>
+               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h5 class="text-white text-center pb-2">Call or Whatsapp</h5>
+                <p class="text-center text-white fs-5">xxxxx-xxxxxx-xxx</p>
+               </div>
+               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h5 class="text-white text-center pb-2">Connect with us</h5>
+               <div class="d-flex align-items-center gap-3 justify-content-center">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+               </div>
+               </div>
 
 
             </div>
