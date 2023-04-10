@@ -139,9 +139,6 @@
                         <a class="nav-link text-white me-4 joinBtn" aria-current="page"
                             href="contactus.html">Contact</a>
                     </li>
-
-
-
                 </ul>
             </div>
         </div>
@@ -158,77 +155,52 @@
         </div>
         <div class="row" style="border-radius:25px;border: 2px solid #b2278a;padding: 2rem;
                 background-color: #b2278a;margin: 0.5rem;">
-            <h4 class="text-center text-white">
+                <div class='col-lg-12'>
+                <h4 class="text-center text-white">
                 Meet With Our Team
             </h4>
-            <div class="col-lg-3">
+                </div>
+           <div class="row ">
+               <?php
+  $conn = mysqli_connect("localhost", "root", "", "almizanwebsite");
+  if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
+    $sql = "SELECT * FROM teaminfo";
+    $query = mysqli_query($conn, $sql);
+    
+    
+    if (mysqli_num_rows($query) > 0) {
+        while ($result = mysqli_fetch_assoc($query)) {
+            ?>
+            <div class="col-lg-4">
                 <div class="card">
-                    <img src="./dummy-image.jpg" alt="John" style="width:100%; border-radius: 16px;">
-                    <h4>John Doe</h4>
-                    <p class="title">CEO & Founder, Example</p>
-                    <p>Harvard University</p>
-                    <div style="margin: 10px 0;">
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                    </div>
+                   
+            <img src="../almezanalhmer/adminpanelmain/<?php echo $result['image'];?>" alt="John" width="150" alt="" 
+            class="mx-auto">
+            <h4><?php echo $result['emname']; ?></h4>           
+            <p class="title"><?php echo $result['emprole']; ?></p>
+           
+                    
 
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <!-- change image of team member from here -->
-                    <img src="./dummy-image.jpg" alt="John" style="width:100%; border-radius: 16px;">
-                    <!-- change Name from here -->
-                    <h4>John Doe</h4>
-                    <!-- change designation -->
-                    <p class="title">CEO & Founder, Example</p>
-                    <p>Harvard University</p>
-                    <div style="margin: 10px 0;">
-                        <!-- enter any social media link here instead of # -->
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                    </div>
+    
+      <?php
+    }
+  } else {
+    echo "No data available";
+  }
 
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <img src="./dummy-image.jpg" alt="John" style="width:100%; border-radius: 16px;">
-                    <h4>John Doe</h4>
-                    <p class="title">CEO & Founder, Example</p>
-                    <p>Harvard University</p>
-                    <div style="margin: 10px 0;">
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <img src="./dummy-image.jpg" alt="John" style="width:100%; border-radius: 16px;">
-                    <h4>John Doe</h4>
-                    <p class="title">CEO & Founder, Example</p>
-                    <p>Harvard University</p>
-                    <div style="margin: 10px 0;">
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
+  //close the database connection
+  mysqli_close($conn);
+?>
+           </div>        
     </div>
+
+
+
+    
     <div class="conatiner-fluid " id="rating" style='background-color: rgb(62, 118, 180); '>
         <div class="container">
             <div class="row pb-3">

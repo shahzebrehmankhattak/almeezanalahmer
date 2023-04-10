@@ -3,13 +3,10 @@
 
 include 'connect.php';
 
-
-
-$name = $_POST['offcername'];
-$designation = $_POST['designation'];
+$title = $_POST['title'];
 $description = $_POST['description'];
-$images= $_FILES['images']['name'];
-$files = $_FILES['images'];
+$images= $_FILES['image']['name'];
+$files = $_FILES['image'];
 // print_r($files);
 $filename = $files ['name'];
 $filepath = $files ['tmp_name'];
@@ -22,11 +19,15 @@ if($fileerror == 0){
     $conn = OpenCon();
    
 
-             $sql = "INSERT INTO  centraldirectoraite (offcername,designation,descrition,images)
-            VALUES ('$name','$designation','$description','$destfile')";
+             $sql = "INSERT INTO  gallery (title,description,image)
+            VALUES ('$title','$description','$destfile')";
             
             if ($conn->query($sql) === TRUE) {
-                echo "New record of Central Directorate created successfully";
+                $alert_message = "Data Added SuccessFully!";
+                echo "<script>alert(' $alert_message');
+                window.location.href = 'gallerydata.php';
+                </script>";
+                
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }

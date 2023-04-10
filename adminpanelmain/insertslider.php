@@ -3,12 +3,8 @@
 
 include 'connect.php';
 
-
-
-
-$imagetext = $_POST['imagetext'];
-$imageslider= $_FILES['imageslider']['name'];
-$files = $_FILES['imageslider'];
+$images= $_FILES['image']['name'];
+$files = $_FILES['image'];
 // print_r($files);
 $filename = $files ['name'];
 $filepath = $files ['tmp_name'];
@@ -21,11 +17,15 @@ if($fileerror == 0){
     $conn = OpenCon();
    
 
-             $sql = "INSERT INTO  imageslider (imagetext,imagesslider)
-            VALUES ('$imagetext','$destfile')";
+             $sql = "INSERT INTO  slider (image)
+            VALUES ('$destfile')";
             
             if ($conn->query($sql) === TRUE) {
-                echo "New record created successfully";
+                $alert_message = "Data Added SuccessFully!";
+                echo "<script>alert(' $alert_message');
+                window.location.href = 'slider.php';
+                </script>";
+                
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }

@@ -4,7 +4,7 @@
 <div class="container mb-5 ">
 
 <div class="row">
-        <div class=" col-lg-10 mx-auto bg-gradient-info border border-3 border-primary">
+        <div class=" col-lg-10 mx-auto  border border-3 p-4" style="background-color:#b2278a;color:white">
     
     
 <h4 class="text-center text-white p-2">Add Team</h4>

@@ -1,25 +1,13 @@
 <?php
 
 
-include 'connection.php';
+include 'connect.php';
 
 $id = $_POST['id']; 
-// if( isset( $_GET['Id'])) {
-//     $Id = $_GET['Id']; 
-// } 
+ $title = $_POST['title'];
+$description = $_POST['description'];
+$files = $_FILES['image'];
 
-
-// echo $Id;
-
-// $name = $_POST['name'];
-// $class = $_POST['class'];
-// $age = $_POST['age'];
-// $dob =$_POST['dob'];
-// $gender = $_POST['gender'];
-// $status = $_POST['status'];
-// $password = $_POST['password'];
-$files = $_FILES['imageslider'];
-// print_r($files);
 $filename = $files ['name'];
 $filepath = $files ['tmp_name'];
 $fileerror = $files ['error'];
@@ -27,22 +15,24 @@ $fileerror = $files ['error'];
 if($fileerror == 0){
 
     $destfile = 'IMAGES/'.$filename;
-
 move_uploaded_file($filepath,$destfile);
 
 $conn = OpenCon();
 
 
-$sql = "UPDATE imaageslider SET 
+$sql = "UPDATE gallery SET 
 
-
+title='$title',
+description='$description',
 image='$destfile' 
 where   id='$id'   ";
         
        
-
 if ($conn->query($sql) === TRUE) {
-    echo "record udpated";
+    $alert_message = "Data Updated SuccessFully!";
+    echo "<script>alert(' $alert_message');
+    window.location.href = 'gallerydata.php';
+    </script>";
    
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
