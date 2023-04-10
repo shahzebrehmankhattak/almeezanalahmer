@@ -124,7 +124,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white joinBtn" href="index.html">Home</a>
+                        <a class="nav-link text-white joinBtn" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white joinBtn" href="#rating">Rating</a>
@@ -133,7 +133,7 @@
                         <a class="nav-link text-white joinBtn" href="products.html">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white joinBtn" href="team.html">Team</a>
+                        <a class="nav-link text-white joinBtn" href="team.php">Team</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white me-4 joinBtn" aria-current="page"
@@ -160,48 +160,15 @@
                 Meet With Our Team
             </h4>
                 </div>
-           <div class="row ">
-               <?php
-  $conn = mysqli_connect("localhost", "root", "", "almizanwebsite");
-  if (!$conn) {
-      die("Connection failed: " . mysqli_connect_error());
-    }
-    $sql = "SELECT * FROM teaminfo";
-    $query = mysqli_query($conn, $sql);
-    
-    
-    if (mysqli_num_rows($query) > 0) {
-        while ($result = mysqli_fetch_assoc($query)) {
-            ?>
-            <div class="col-lg-4">
-                <div class="card">
-                   
-            <img src="../almezanalhmer/adminpanelmain/<?php echo $result['image'];?>" alt="John" width="150" alt="" 
-            class="mx-auto">
-            <h4><?php echo $result['emname']; ?></h4>           
-            <p class="title"><?php echo $result['emprole']; ?></p>
-           
-                    
+                <?php include 'connectteam.php' ?>
+     
+              
 
-                </div>
-            </div>
-    
-      <?php
-    }
-  } else {
-    echo "No data available";
-  }
-
-  //close the database connection
-  mysqli_close($conn);
-?>
-           </div>        
+        </div>
     </div>
 
 
-
-    
-    <div class="conatiner-fluid " id="rating" style='background-color: rgb(62, 118, 180); '>
+   <div class="conatiner-fluid " id="rating" style='background-color: rgb(62, 118, 180); '>
         <div class="container">
             <div class="row pb-3">
                 <div class="col-lg-12">
@@ -278,29 +245,30 @@
     <div class="container-fluid" style='background-color: #b2278a;'>
         <div class="container">
             <div class="row   pt-3 pb-3">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div>
-                        <h5 class="text-white text-center pb-2">Email us at</h5>
-                        <p class="text-center text-white fs-5">sgacadcompany@gmail.com</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <h5 class="text-white text-center pb-2">Call or Whatsapp</h5>
-                    <p class="text-center text-white fs-5">xxxxx-xxxxxx-xxx</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <h5 class="text-white text-center pb-2">Connect with us</h5>
-                    <div class="d-flex align-items-center gap-3 justify-content-center">
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-instagram"></a>
-                    </div>
-                </div>
+               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+<div>
+<h5 class="text-white text-center pb-2">Email us at</h5>
+<p class="text-center text-white fs-5">sgacadcompany@gmail.com</p>
+</div>
+               </div>
+               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h5 class="text-white text-center pb-2">Call or Whatsapp</h5>
+                <p class="text-center text-white fs-5">xxxxx-xxxxxx-xxx</p>
+               </div>
+               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h5 class="text-white text-center pb-2">Connect with us</h5>
+               <div class="d-flex align-items-center gap-3 justify-content-center">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+               </div>
+               </div>
 
 
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
